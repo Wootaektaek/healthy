@@ -11,7 +11,7 @@ sex = st.selectbox(
     '성별을 골라주세요',
     ('남성', '여성'))
 
-st.write('You selected:', option)
+st.write('You selected:', sex)
 
 user_face = st.camera_input('오늘의 당신을 알려주세요.')
 
