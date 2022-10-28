@@ -37,7 +37,7 @@ drug = st.selectbox(
 
 #st.write('You selected:', drug)
 
-st.write('You :', user_name, sex, age, height, goal, drug)
+st.write('You :', user_name,' / ', sex, ' / ', age, ' / ',height, ' / ', goal, ' / ', drug)
 
 user_face = st.camera_input('오늘의 당신을 알려주세요.')
 
