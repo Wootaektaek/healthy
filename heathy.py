@@ -39,5 +39,9 @@ drug = st.selectbox(
 
 st.write('You :', user_name,' / ', sex, ' / ', age, ' / ',height, ' / ', goal, ' / ', drug)
 
+ex_image = Image.open('leedaeho.jpg')
+
+st.image(ex_image, caption='이처럼 정면을 바라봐 주세요')
+
 user_face = st.camera_input('오늘의 당신을 알려주세요.')
 
