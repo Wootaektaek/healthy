@@ -11,31 +11,33 @@ sex = st.selectbox(
     '성별을 골라주세요',
     ('남성', '여성'))
 
-st.write('You selected:', sex)
+#st.write('You selected:', sex)
 
 age = st.selectbox(
     '나이를 골라주세요',
     ('~18', '19~'))
 
-st.write('You selected:', age)
+#st.write('You selected:', age)
 
 height = st.selectbox(
     '키를 골라주세요',
     ('~155', '156~'))
 
-st.write('You selected:', height)
+#st.write('You selected:', height)
 
 goal = st.selectbox(
     '목적을 골라주세요',
     ('유산소', '무산소'))
 
-st.write('You selected:', goal)
+#st.write('You selected:', goal)
 
 drug = st.selectbox(
     '음주, 흡연 여부를 골라주세요',
     ('금주,금연', '음주,금연'))
 
-st.write('You selected:', drug)
+#st.write('You selected:', drug)
+
+st.write('You :', user_name, sex, age, height, goal, drug)
 
 user_face = st.camera_input('오늘의 당신을 알려주세요.')
 
