@@ -45,3 +45,4 @@ st.image(ex_image, caption='이처럼 정면을 바라봐 주세요')
 
 user_face = st.camera_input('오늘의 당신을 알려주세요.')
 
+model.predict_faces(user_face, show_img=True)
