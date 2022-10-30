@@ -45,5 +45,9 @@ st.image(ex_image, caption='이처럼 정면을 바라봐 주세요')
 
 user_face = st.camera_input('오늘의 당신을 알려주세요.')
 
-from faec2bmi_code import *
+# ==================================================================================
+# 아래부터 face2bmi 이미지 출력 코드
+
+from tensorflow import keras
+model=keras.model.load_model('./project/face2bmi/saved_model/model_vgg16_baes.h5')
 model.predict_faces(user_face, show_img=True)
