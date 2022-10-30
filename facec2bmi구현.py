@@ -72,6 +72,7 @@ else:
   model.load_weights(model_dir)
 
 g = os.listdir(test_dir)
-g = [file for file in g if file.endswith(".jpg")][0]
-print(g)
-model.predict_faces(test_dir+g, show_img=True)
+g = [file for file in g][0]
+
+# model.predict_faces(test_dir+g, show_img=True)
+
