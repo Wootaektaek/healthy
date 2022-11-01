@@ -49,7 +49,7 @@ user_face = st.camera_input('오늘의 당신을 알려주세요.')
 
 # ==================================================================================
 # 아래부터 face2bmi 이미지 출력 코드
-
+'''
 mode = 'train' #'train' or 'predict'
 model_type = 'vgg16'
 model_tag = 'base'
@@ -97,3 +97,4 @@ g = os.listdir(test_dir)
 g = [file for file in g][0]
 
 model.predict_faces(test_dir+g, show_img=True)
+'''
