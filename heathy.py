@@ -65,7 +65,6 @@ import os
 import json
 from keras.callbacks import EarlyStopping, ModelCheckpoint, TensorBoard
 
-import seaborn as sns
 from pathlib import Path
 from face2bmi_models import FacePrediction
 import glob
