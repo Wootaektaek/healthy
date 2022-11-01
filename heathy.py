@@ -66,7 +66,7 @@ import json
 from keras.callbacks import EarlyStopping, ModelCheckpoint, TensorBoard
 
 from pathlib import Path
-from face2bmi_models import FacePrediction
+from face2bmi_model import FacePrediction
 import glob
 
 alimages = os.listdir('./face2bmi/train_aligned')
