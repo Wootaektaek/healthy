@@ -1,7 +1,7 @@
 import streamlit as st
 import webbrowser
 from PIL import Image
-from tensorflow import keras
+
 st.title("사용자 맞춤 운동 추천 서비스 헬띠")
 
 st.subheader("안녕하세요. 헬띠입니다. 설문을 통해 사용자에게 운동을 추천하고 사진을 업로드하면 BMI를 알려줍니다. 이를 통해 하루하루 달라지는 본인을 확인하세요.")
@@ -49,6 +49,6 @@ user_face = st.camera_input('오늘의 당신을 알려주세요.')
 # ==================================================================================
 # 아래부터 face2bmi 이미지 출력 코드
 
-
+from tensorflow import keras
 model=keras.model.load_model('./project/face2bmi/saved_model/model_vgg16_baes.h5')
 model.predict_faces(user_face, show_img=True)
