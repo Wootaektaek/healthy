@@ -49,7 +49,53 @@ user_face = st.camera_input('오늘의 당신을 알려주세요.')
 
 # ==================================================================================
 # 아래부터 face2bmi 이미지 출력 코드
-from tensorflow import keras
-model=keras.models.load_model('project/face2bmi/saved_model/model_vgg16_base.h5')
-model.predict_faces('leedaeho.jpg', show_img=True)
 
+mode = 'train' #'train' or 'predict'
+model_type = 'vgg16'
+model_tag = 'base'
+model_id = '{:s}_{:s}'.format(model_type, model_tag)
+model_dir = './face2bmi/saved_model/model_{:s}.h5'.format(model_id)
+# model_dir = './model_{:s}.h5'.format(model_id)로 설정해보기
+bs = 8
+epochs = 2
+freeze_backbone = True # True => transfer learning; False => train from scratch
+
+import pandas as pd
+import os
+import json
+from keras.callbacks import EarlyStopping, ModelCheckpoint, TensorBoard
+%matplotlib inline
+from matplotlib import pyplot as plt
+import seaborn as sns
+from pathlib import Path
+from face2bmi_models import FacePrediction
+import glob
+
+alimages = os.listdir('./face2bmi/train_aligned')
+train = pd.read_csv('./face2bmi/train.csv')
+valid = pd.read_csv('./face2bmi/valid.csv')
+
+train = train.loc[train['index'].isin(alimages)]
+valid = valid.loc[valid['index'].isin(alimages)]
+
+# create metrics, model dirs
+Path('./face2bmi/metrics').mkdir(parents = True, exist_ok = True)
+Path('./face2bmi/saved_model').mkdir(parents = True, exist_ok = True)
+
+es = EarlyStopping(patience=3)
+ckp = ModelCheckpoint(model_dir, save_best_only=True, save_weights_only=True, verbose=1)
+tb = TensorBoard('./tb/%s'%(model_id))
+callbacks = [es, ckp]
+
+model = FacePrediction(img_dir = './face2bmi/train_aligned', model_type = model_type)
+model.define_model(freeze_backbone = freeze_backbone)
+# model.model.summary()
+if mode == 'train':
+  model_history = model.train(train, valid, bs = bs, epochs = epochs, callbacks = callbacks)
+else:
+  model.load_weights(model_dir)
+
+g = os.listdir(test_dir)
+g = [file for file in g][0]
+
+model.predict_faces(test_dir+g, show_img=True)
