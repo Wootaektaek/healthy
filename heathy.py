@@ -51,5 +51,5 @@ user_face = st.camera_input('오늘의 당신을 알려주세요.')
 # 아래부터 face2bmi 이미지 출력 코드
 from tensorflow import keras
 model=keras.models.load_model('./face2bmi/saved_model/model_vgg16_base.h5')
-model.predict_faces(user_face, show_img=True)
+model.predict_faces('leedaeho.jpg', show_img=True)
 
