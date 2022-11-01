@@ -44,3 +44,5 @@ tzlocal==4.2
 urllib3==1.26.12
 validators==0.20.0
 zipp==3.9.0
+keras==2.9.0
+tensorflow==2.9.2
