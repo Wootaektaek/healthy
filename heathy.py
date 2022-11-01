@@ -64,7 +64,7 @@ import pandas as pd
 import os
 import json
 from keras.callbacks import EarlyStopping, ModelCheckpoint, TensorBoard
-%matplotlib inline
+
 from matplotlib import pyplot as plt
 import seaborn as sns
 from pathlib import Path
