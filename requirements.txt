@@ -50,5 +50,4 @@ keras_vggface==0.6
 keras_applications==1.0.8
 keras_preprocessing==1.1.2
 opencv-python-headless
-opencv_python
 mtcnn==0.1.0
