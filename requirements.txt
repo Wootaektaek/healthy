@@ -45,7 +45,7 @@ urllib3==1.26.12
 validators==0.20.0
 zipp==3.9.0
 keras==2.9.0
-tensorflow==2.10.0
+tensorflow==2.9.2
 keras_vggface==0.6
 keras_applications==1.0.8
 keras_preprocessing==1.1.2
