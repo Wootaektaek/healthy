@@ -51,4 +51,3 @@ keras_applications==1.0.8
 keras_preprocessing==1.1.2
 opencv-python-headless
 mtcnn==0.1.0
-matplotlib
