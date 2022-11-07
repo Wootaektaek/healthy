@@ -70,7 +70,7 @@ ex_image = Image.open('leedaeho.jpeg')
 
 st.image(ex_image, caption='이처럼 정면을 바라본 이미지를 업로드 해주세요')
 
-user_face = st.camera_input('오늘의 당신을 알려주세요.')
+# user_face = st.camera_input('오늘의 당신을 알려주세요.')
 
 # ==================================================================================
 # 아래부터 face2bmi 이미지 출력 코드
