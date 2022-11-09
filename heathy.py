@@ -269,11 +269,13 @@ for r in recommend_list:
 
 # ==================================================================================
 # FACE2BMI
+import cv2
+
 st.subheader('')
 st.subheader("얼굴 이미지로 예측해보는 BMI")
 
 ex_image = Image.open('leedaeho.jpeg')
-
+ex_image = cv2.resize(ex_imgae, (300,300)
 st.image(ex_image, caption='이처럼 정면을 바라본 이미지를 업로드 해주세요')
 
 
