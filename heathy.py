@@ -4,7 +4,6 @@ from PIL import Image, ImageOps
 import numpy as np
 import webbrowser
 from tensorflow import keras
-# import cv2
 import tempfile
 import os
 import shutil
@@ -74,6 +73,7 @@ st.image(ex_image, caption='이처럼 정면을 바라본 이미지를 업로드
 
 # ==================================================================================
 # 아래부터 face2bmi 이미지 출력 코드
+import cv2
 st.subheader('')
 st.subheader("얼굴 이미지로 예측해보는 BMI")
 
