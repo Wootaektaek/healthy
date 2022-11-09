@@ -258,7 +258,7 @@ result=data1.iloc[best_similarity]['result']
 
 # st.markdown("<h1 style='text-align: center; color: green;'>사용자 맞춤 운동 추천 헬띠</h1>", unsafe_allow_html=True)
 
-st.markdown("회원님께 \'{}\'과(와) 관련된 운동을 추천 드립니다.".format(result))
+st.markdown("## 회원님께 \'{}\'과(와) 관련된 운동을 추천 드립니다.".format(result))
 
 df2=data2.loc[[result]]
 df2=df2.transpose()
