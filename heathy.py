@@ -224,10 +224,10 @@ elif goal=='경쟁':
 if drug=='없음':
     a=np.append(a, 0)
     a=a.astype(int)
-elif drug=='음주':
+elif drug=='음주만':
     a=np.append(a, 1)
     a=a.astype(int)
-elif drug=='흡연':
+elif drug=='흡연만':
     a=np.append(a, 2)
     a=a.astype(int)
 elif drug=='둘다':
