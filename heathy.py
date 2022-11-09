@@ -79,7 +79,7 @@ habit = st.selectbox(
     '현재 식단을 골라주세요',
     ('생식위주', '체형고려', '체중조절', '비식이요법'))
 
-st.write('You :', user_name,' / ', sex, ' / ', age, ' / ',height, ' / ', goal, ' / ', drug)
+st.write('You :', user_name,' / ', sex, ' / ', age, ' / ',height, ' / ', goal, ' / ', drug, ' / ', habit)
 
 # ==================================================================================
 # RECOMMEND
