@@ -49,5 +49,5 @@ tensorflow==2.9.2
 keras_vggface==0.6
 keras_applications==1.0.8
 keras_preprocessing==1.1.2
-opencv-python-headless
+opencv-python-headless==4.6.0.66
 mtcnn==0.1.0
