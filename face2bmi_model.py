@@ -13,7 +13,7 @@ import streamlit as st
 from matplotlib import pyplot as plt
 import matplotlib.patches as patches
 from PIL import Image
-# import cv2
+import cv2
 
 # face alignment
 from mtcnn.mtcnn import MTCNN
