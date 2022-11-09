@@ -4,7 +4,7 @@ from PIL import Image, ImageOps
 import numpy as np
 import webbrowser
 from tensorflow import keras
-import cv2
+# import cv2
 import tempfile
 import os
 import shutil
