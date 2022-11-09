@@ -264,7 +264,10 @@ df2=data2.loc[[result]]
 df2=df2.transpose()
 r=df2[df2[result]==1]
 recommend_list=r.index.to_list()
-st.write('\'{}\'과(와) 관련된 운동 목록입니다. {}'.format(result, recommend_list))
+st.markdown('다음은 \'{}\'과(와) 관련된 운동 목록입니다.'.format(result))
+
+for r in recommend_list:
+            st.markdown(r, end=' ㅣ ')
 
 # ==================================================================================
 # FACE2BMI
