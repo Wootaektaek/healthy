@@ -6,6 +6,7 @@ from keras.layers import Flatten, Dense, Input, Dropout, Activation, BatchNormal
 from keras_vggface.vggface import VGGFace
 from keras_vggface import utils
 from keras.utils import load_img, img_to_array
+import streamlit as st
 
 
 
@@ -244,5 +245,6 @@ class FacePrediction(object):
                 ax.set_title('BMI:{:3.1f}\nAGE:{:02.0f}\nSEX:{:s}'.format(bmi[0,0], age[0,0], 'M' if sex[0,0] > self.sex_thresh else 'F'),
                        color = 'black', fontsize = 20)
             plt.show()
+            st.pyplot(fig)
         
         return preds
