@@ -27,7 +27,7 @@ import time
 
 #st.title("사용자 맞춤 운동 추천 서비스 헬띠")
 #페이지 제목 색 추가
-st.markdown("<h1 style='text-align: center; color: #87CEFA;'>사용자 맞춤 운동 추천 헬띠</h1>", unsafe_allow_html=True)
+st.markdown("<h1 style='text-align: center; color: #9ACD32;'>사용자 맞춤 운동 추천 헬띠</h1>", unsafe_allow_html=True)
 
 st.markdown("#### 안녕하세요. 헬띠입니다.\
             <br>저희는 설문을 통해 사용자에게 운동을 추천하고 사진을 업로드하면 BMI를 알려줍니다.\
