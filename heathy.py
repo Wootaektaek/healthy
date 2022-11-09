@@ -256,8 +256,6 @@ best_similarity=user_similarity_scores.idxmax()
 
 result=data1.iloc[best_similarity]['result']
 
-# st.markdown("<h1 style='text-align: center; color: green;'>사용자 맞춤 운동 추천 헬띠</h1>", unsafe_allow_html=True)
-
 st.markdown("##### 회원님께 \'{}\'과(와) 관련된 운동을 추천 드립니다.".format(result))
 
 df2=data2.loc[[result]]
@@ -266,7 +264,7 @@ r=df2[df2[result]==1]
 recommend_list=r.index.to_list()
 st.markdown('다음은 \'{}\'과(와) 관련된 운동 목록입니다.'.format(result))
 
-st.write(recommend_list)
+st.markdown(recommend_list)
 
 # ==================================================================================
 # FACE2BMI
