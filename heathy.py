@@ -15,7 +15,8 @@ def add_bg_from_url():
          f"""
          <style>
          .stApp {{
-             background-image: url("https://img.freepik.com/free-photo/portrait-young-sportive-girl-training-with-dumbbells-isolated-blue-background-neon_155003-45614.jpg?w=2000&t=st=1667991871~exp=1667992471~hmac=63ad13229f1bed377a05a235676431acc58d44d07f51c1a6cc59479d7437ce45");
+             background-image: url
+             ("https://images.pexels.com/photos/669578/pexels-photo-669578.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2");
              background-attachment: fixed;
              background-size: cover
          }}
@@ -27,7 +28,7 @@ add_bg_from_url()
 
 #st.title("사용자 맞춤 운동 추천 서비스 헬띠")
 #페이지 제목 색 추가
-st.markdown("<h1 style='text-align: center; color: green;'>사용자 맞춤 운동 추천 헬띠</h1>", unsafe_allow_html=True)
+st.markdown("<h1 style='text-align: center; color: #87CEFA;'>사용자 맞춤 운동 추천 헬띠</h1>", unsafe_allow_html=True)
 
 st.markdown("#### 안녕하세요. 헬띠입니다.\
             <br>저희는 설문을 통해 사용자에게 운동을 추천하고 사진을 업로드하면 BMI를 알려줍니다.\
