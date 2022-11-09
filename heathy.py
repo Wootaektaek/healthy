@@ -248,7 +248,6 @@ elif habit=='비식이요법':
     a=np.append(a, 4)
     a=a.astype(int)
 
-st.write(a)
 user_similarity_scores = df1.dot(a) / (np.linalg.norm(df1, axis=1) * np.linalg.norm(a)) #사용자 입력에 대한 전체 코사인 유사도
 
 best_similarity=user_similarity_scores.idxmax()
