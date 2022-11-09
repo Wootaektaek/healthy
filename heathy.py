@@ -9,21 +9,21 @@ import os
 import shutil
 import time
 
-#웹 페이지 배경
-def add_bg_from_url():
-    st.markdown(
-         f"""
-         <style>
-         .stApp {{
-             background-image: url("https://get.wallhere.com/photo/men-black-monochrome-room-fitness-model-bodybuilding-muscle-arm-chest-black-and-white-monochrome-photography-physical-fitness-biceps-curl-46781.jpg");
-             background-attachment: fixed;
-             background-size: cover
-         }}
-         </style>
-         """,
-         unsafe_allow_html=True
-     )
-add_bg_from_url() 
+# #웹 페이지 배경
+# def add_bg_from_url():
+#     st.markdown(
+#          f"""
+#          <style>
+#          .stApp {{
+#              background-image: url("https://get.wallhere.com/photo/men-black-monochrome-room-fitness-model-bodybuilding-muscle-arm-chest-black-and-white-monochrome-photography-physical-fitness-biceps-curl-46781.jpg");
+#              background-attachment: fixed;
+#              background-size: cover
+#          }}
+#          </style>
+#          """,
+#          unsafe_allow_html=True
+#      )
+# add_bg_from_url() 
 
 #st.title("사용자 맞춤 운동 추천 서비스 헬띠")
 #페이지 제목 색 추가
@@ -256,7 +256,9 @@ best_similarity=user_similarity_scores.idxmax()
 
 result=data1.iloc[best_similarity]['result']
 
-st.write('회원님께 \'{}\'과(와) 관련된 운동을 추천 드립니다.'.format(result))
+# st.markdown("<h1 style='text-align: center; color: green;'>사용자 맞춤 운동 추천 헬띠</h1>", unsafe_allow_html=True)
+
+st.markdown("<h1 style='text-align: center'>회원님께 \'{}\'과(와) 관련된 운동을 추천 드립니다..format(result)</h1>", unsafe_allow_html=True)
 
 df2=data2.loc[[result]]
 df2=df2.transpose()
