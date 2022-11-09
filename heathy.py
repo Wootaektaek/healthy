@@ -88,12 +88,12 @@ person_image=st.file_uploader(
 submit=st.button('누르면 예측을 시작합니다. 잠시만 기다려주세요!')
 
 if submit:
-  test_dir='./face2bmi/single_face/'
+  test_dir='project/face2bmi/single_face/'
   mode = 'train' #'train' or 'predict'
   model_type = 'vgg16'
   model_tag = 'base'
   model_id = '{:s}_{:s}'.format(model_type, model_tag)
-  model_dir = './face2bmi/saved_model/model_{:s}.h5'.format(model_id)
+  model_dir = 'project/face2bmi/saved_model/model_{:s}.h5'.format(model_id)
   # model_dir = './model_{:s}.h5'.format(model_id)로 설정해보기
   bs = 8
   epochs = 2
@@ -105,19 +105,19 @@ if submit:
   from pathlib import Path
   from face2bmi_model import FacePrediction
   import glob
-  alimages = os.listdir('./face2bmi/train_aligned')
-  train = pd.read_csv('./face2bmi/train.csv')
-  valid = pd.read_csv('./face2bmi/valid.csv')
+  alimages = os.listdir('project/face2bmi/train_aligned')
+  train = pd.read_csv('project/face2bmi/train.csv')
+  valid = pd.read_csv('project/face2bmi/valid.csv')
   train = train.loc[train['index'].isin(alimages)]
   valid = valid.loc[valid['index'].isin(alimages)]
   # create metrics, model dirs
-  Path('./face2bmi/metrics').mkdir(parents = True, exist_ok = True)
-  Path('./face2bmi/saved_model').mkdir(parents = True, exist_ok = True)
+  Path('project/face2bmi/metrics').mkdir(parents = True, exist_ok = True)
+  Path('project/face2bmi/saved_model').mkdir(parents = True, exist_ok = True)
   es = EarlyStopping(patience=3)
   ckp = ModelCheckpoint(model_dir, save_best_only=True, save_weights_only=True, verbose=1)
   tb = TensorBoard('./tb/%s'%(model_id))
   callbacks = [es, ckp]
-  model = FacePrediction(img_dir = './face2bmi/train_aligned', model_type = model_type)
+  model = FacePrediction(img_dir = 'project/face2bmi/train_aligned', model_type = model_type)
   model.define_model(freeze_backbone = freeze_backbone)
 
   if mode == 'train':
