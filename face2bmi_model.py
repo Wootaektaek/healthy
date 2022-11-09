@@ -7,14 +7,13 @@ from keras_vggface.vggface import VGGFace
 from keras_vggface import utils
 from keras.utils import load_img, img_to_array
 import streamlit as st
-from PIL import Image
 
 
 # image manipulation
 from matplotlib import pyplot as plt
 import matplotlib.patches as patches
 from PIL import Image
-# import cv2
+import cv2
 
 # face alignment
 from mtcnn.mtcnn import MTCNN
@@ -56,7 +55,7 @@ def imgs2arr(img_names, img_dir, version = 1):
     return np.concatenate(imgs)
 
 def process_arr(arr, version):
-#     img = cv2.resize(arr, (224, 224))
+    img = cv2.resize(arr, (224, 224))
     img = np.expand_dims(img, 0)
     img = utils.preprocess_input(img, version = version)
     return img
@@ -221,8 +220,7 @@ class FacePrediction(object):
                       confidence = 0.95, fig_size = (16,12)):
         
         assert os.path.isfile(img_path), 'only single image is supported'
-#         img = cv2.cvtColor(cv2.imread(img_path), cv2.COLOR_BGR2RGB)
-        img=Image.open(img_path)
+        img = cv2.cvtColor(cv2.imread(img_path), cv2.COLOR_BGR2RGB)
         boxes, faces = self.detect_faces(img_path, confidence)
         preds = [self.model.predict(face) for face in faces]
         
