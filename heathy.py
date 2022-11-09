@@ -39,12 +39,12 @@ sex = st.selectbox(
 
 #st.write('You selected:', sex)
 
-age = st.number_input('나이를 입력해주세요', min_value=1, max_value=100, value=0, step=1)
-st.write('나이 : ', age)
+age = st.number_input('나이를 입력해주세요', min_value=1, max_value=100, value=1, step=1)
+st.write('나이: ', age)
 #('~17', '18~21', '22~25', '26~29', '30~')
 
 weight = st.number_input('몸무게를 입력해주세요', min_value=1, max_value=150, value=0, step=1)
-st.write('몸무게 : ', weight)
+st.write('몸무게: ', weight)
 
 # weight = st.selectbox(
 #     '몸무게를 골라주세요',
@@ -53,7 +53,7 @@ st.write('몸무게 : ', weight)
 #st.write('You selected:', weight)
 
 height = st.number_input('키를 입력해주세요', min_value=1, max_value=200, value=0, step=1)
-st.write('키 : ', height)
+st.write('키: ', height)
 
 # height = st.selectbox(
 #     '키를 골라주세요',
@@ -62,7 +62,7 @@ st.write('키 : ', height)
 #st.write('You selected:', height)
 
 fat = st.number_input('키를 입력해주세요', min_value=1, max_value=50, value=0, step=1)
-st.write('체지방(%) : ', fat)
+st.write('체지방(%): ', fat)
 
 # fat = st.selectbox(
 #     '체지방(%)을 골라주세요',
@@ -73,17 +73,17 @@ st.write('체지방(%) : ', fat)
 goal = st.selectbox(
     '운동 목적을 골라주세요',
     ('건강향상', '체형교정', '근력향상', '경쟁'))
-st.write('운동 목적 : ', goal)
+st.write('운동 목적: ', goal)
 
 drug = st.selectbox(
     '음주, 흡연 여부를 골라주세요',
     ('없음', '음주만', '흡연만', '둘다'))
-st.write('음주, 흡연 : ', drug)
+st.write('음주/흡연: ', drug)
 
 habit = st.selectbox(
     '현재 식단을 골라주세요',
     ('생식위주', '체형고려', '체중조절', '비식이요법'))
-st.write('현재 식단 : ', habit)
+st.write('현재 식단: ', habit)
 
 st.write('You :', user_name,' / ', sex, ' / ', age, ' / ',height, ' / ', goal, ' / ', drug)
 
