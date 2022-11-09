@@ -267,7 +267,7 @@ recommend_list=r.index.to_list()
 st.markdown('다음은 \'{}\'과(와) 관련된 운동 목록입니다.'.format(result))
 
 for r in recommend_list:
-            st.markdown(r)
+            st.write(r, end=' ')
 
 # ==================================================================================
 # FACE2BMI
