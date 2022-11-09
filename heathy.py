@@ -9,21 +9,21 @@ import os
 import shutil
 import time
 
-# #웹 페이지 배경
-# def add_bg_from_url():
-#     st.markdown(
-#          f"""
-#          <style>
-#          .stApp {{
-#              background-image: url("https://get.wallhere.com/photo/men-black-monochrome-room-fitness-model-bodybuilding-muscle-arm-chest-black-and-white-monochrome-photography-physical-fitness-biceps-curl-46781.jpg");
-#              background-attachment: fixed;
-#              background-size: cover
-#          }}
-#          </style>
-#          """,
-#          unsafe_allow_html=True
-#      )
-# add_bg_from_url() 
+#웹 페이지 배경
+def add_bg_from_url():
+    st.markdown(
+         f"""
+         <style>
+         .stApp {{
+             background-image: url("https://img.freepik.com/free-photo/portrait-young-sportive-girl-training-with-dumbbells-isolated-blue-background-neon_155003-45614.jpg?w=2000&t=st=1667991871~exp=1667992471~hmac=63ad13229f1bed377a05a235676431acc58d44d07f51c1a6cc59479d7437ce45");
+             background-attachment: fixed;
+             background-size: cover
+         }}
+         </style>
+         """,
+         unsafe_allow_html=True
+     )
+add_bg_from_url() 
 
 #st.title("사용자 맞춤 운동 추천 서비스 헬띠")
 #페이지 제목 색 추가
@@ -269,12 +269,14 @@ for r in recommend_list:
 
 # ==================================================================================
 # FACE2BMI
+st.subheader('')
+st.subheader("얼굴 이미지로 예측해보는 BMI")
+
 ex_image = Image.open('leedaeho.jpeg')
 
 st.image(ex_image, caption='이처럼 정면을 바라본 이미지를 업로드 해주세요')
 
-st.subheader('')
-st.subheader("얼굴 이미지로 예측해보는 BMI")
+
 
 def save_uploaded_file(dir, file):
   if not os.path.exists(dir):
