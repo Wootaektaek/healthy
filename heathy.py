@@ -256,7 +256,7 @@ best_similarity=user_similarity_scores.idxmax()
 
 result=data1.iloc[best_similarity]['result']
 
-st.markdown("##### 회원님께 \'{}\'과(와) 관련된 운동을 추천 드립니다.".format(result))
+st.markdown("##### 저희는 회원님께 \'{}\'과(와) 관련된 운동을 추천드립니다.".format(result))
 
 df2=data2.loc[[result]]
 df2=df2.transpose()
@@ -265,7 +265,7 @@ recommend_list=r.index.to_list()
 st.markdown('다음은 \'{}\'과(와) 관련된 운동 목록입니다.'.format(result))
 
 for r in recommend_list:
-            st.markdown(r, end=' ')
+            st.markdown(r)
 
 # ==================================================================================
 # FACE2BMI
