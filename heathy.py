@@ -70,20 +70,14 @@ fat = st.number_input('체지방(%)을 입력해주세요', min_value=1, max_val
 goal = st.selectbox(
     '운동 목적을 골라주세요',
     ('건강향상', '체형교정', '근력향상', '경쟁'))
-goal=st.text_input(goal)
-
-
 
 drug = st.selectbox(
     '음주, 흡연 여부를 골라주세요',
     ('없음', '음주만', '흡연만', '둘다'))
-drug=st.text_input(drug)
-
 
 habit = st.selectbox(
     '현재 식단을 골라주세요',
     ('생식위주', '체형고려', '체중조절', '비식이요법'))
-habit=st.text_input(habit)
 
 st.write('You :', user_name,' / ', sex, ' / ', age, ' / ',height, ' / ', goal, ' / ', drug)
 
