@@ -250,8 +250,9 @@ elif habit=='체중조절':
 elif habit=='비식이요법':
     a=np.append(a, 4)
     a=a.astype(int)
-    
-user_similarity_scores = df1.dot(a)/ (np.linalg.norm(df1, axis=1) * np.linalg.norm(a)) #사용자 입력에 대한 전체 코사인 유사도
+
+st.write(a)
+user_similarity_scores = df1.dot(a) / (np.linalg.norm(df1, axis=1) * np.linalg.norm(a)) #사용자 입력에 대한 전체 코사인 유사도
 
 best_similarity=user_similarity_scores.idxmax()
 
@@ -270,8 +271,6 @@ st.write('\'{}\'과(와) 관련된 운동 목록입니다. {}'.format(result, re
 ex_image = Image.open('leedaeho.jpeg')
 
 st.image(ex_image, caption='이처럼 정면을 바라본 이미지를 업로드 해주세요')
-
-
 
 st.subheader('')
 st.subheader("얼굴 이미지로 예측해보는 BMI")
