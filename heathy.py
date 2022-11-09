@@ -43,7 +43,7 @@ age = st.number_input('나이를 입력해주세요', min_value=1, max_value=100
 st.write('나이: ', age)
 #('~17', '18~21', '22~25', '26~29', '30~')
 
-weight = st.number_input('몸무게를 입력해주세요', min_value=1, max_value=150, value=0, step=1)
+weight = st.number_input('몸무게를 입력해주세요', min_value=1, max_value=150, value=1, step=1)
 st.write('몸무게: ', weight)
 
 # weight = st.selectbox(
@@ -52,7 +52,7 @@ st.write('몸무게: ', weight)
 
 #st.write('You selected:', weight)
 
-height = st.number_input('키를 입력해주세요', min_value=1, max_value=200, value=0, step=1)
+height = st.number_input('키를 입력해주세요', min_value=1, max_value=200, value=1, step=1)
 st.write('키: ', height)
 
 # height = st.selectbox(
@@ -61,7 +61,7 @@ st.write('키: ', height)
 
 #st.write('You selected:', height)
 
-fat = st.number_input('키를 입력해주세요', min_value=1, max_value=50, value=0, step=1)
+fat = st.number_input('체지방(%)을 입력해주세요', min_value=1, max_value=50, value=1, step=1)
 st.write('체지방(%): ', fat)
 
 # fat = st.selectbox(
