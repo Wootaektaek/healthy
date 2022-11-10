@@ -99,7 +99,7 @@ data1.columns=['age',
               'drugs',
               'eating habits']
 
-data2=pd.read_csv('운동분류최종.csv')
+data2=pd.read_csv('운동분류1110.csv')
 data2=data2.rename(columns={'Unnamed: 0':'추천'})
 data2=data2.set_index('추천')
 
