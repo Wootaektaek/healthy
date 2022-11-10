@@ -10,20 +10,20 @@ import shutil
 import time
 
 #웹 페이지 배경
-# def add_bg_from_url():
-#     st.markdown(
-#          f"""
-#          <style>
-#          .stApp {{
-#              background-image: url("https://images.unsplash.com/photo-1528805639423-44f7d2a3b368?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2480&q=80");
-#              background-attachment: fixed;
-#              background-size: cover
-#          }}
-#          </style>
-#          """,
-#          unsafe_allow_html=True
-#      )
-# add_bg_from_url() 
+def add_bg_from_url():
+    st.markdown(
+         f"""
+         <style>
+         .stApp {{
+             background-image: url("https://wallpaperaccess.com/full/834273.jpg");
+             background-attachment: fixed;
+             background-size: cover
+         }}
+         </style>
+         """,
+         unsafe_allow_html=True
+     )
+add_bg_from_url() 
 
 #st.title("사용자 맞춤 운동 추천 서비스 헬띠")
 #페이지 제목 색 추가
