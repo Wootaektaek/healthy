@@ -9,7 +9,7 @@ import os
 import shutil
 import time
 
-웹 페이지 배경
+#웹 페이지 배경
 def add_bg_from_url():
     st.markdown(
          f"""
