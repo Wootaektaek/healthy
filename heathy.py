@@ -15,7 +15,7 @@ def add_bg_from_url():
          f"""
          <style>
          .stApp {{
-             background-image: url("https://wallpaperaccess.com/full/834273.jpg");
+             background-image: url("https://wallpaperforu.com/wp-content/uploads/2021/07/Wallpaper-Barbell-And-Dumbbell-Weights-For-Gym-Workout-And6-scaled.jpg");
              background-attachment: fixed;
              background-size: cover
          }}
