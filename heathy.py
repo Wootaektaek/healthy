@@ -9,21 +9,21 @@ import os
 import shutil
 import time
 
-#웹 페이지 배경
-def add_bg_from_url():
-    st.markdown(
-         f"""
-         <style>
-         .stApp {{
-             background-image: url("https://wallpaperforu.com/wp-content/uploads/2021/07/Wallpaper-Barbell-And-Dumbbell-Weights-For-Gym-Workout-And6-scaled.jpg");
-             background-attachment: fixed;
-             background-size: cover
-         }}
-         </style>
-         """,
-         unsafe_allow_html=True
-     )
-add_bg_from_url() 
+##웹 페이지 배경
+# def add_bg_from_url():
+#     st.markdown(
+#          f"""
+#          <style>
+#          .stApp {{
+#              background-image: url("https://wallpaperforu.com/wp-content/uploads/2021/07/Wallpaper-Barbell-And-Dumbbell-Weights-For-Gym-Workout-And6-scaled.jpg");
+#              background-attachment: fixed;
+#              background-size: cover
+#          }}
+#          </style>
+#          """,
+#          unsafe_allow_html=True
+#      )
+# add_bg_from_url() 
 
 #st.title("사용자 맞춤 운동 추천 서비스 헬띠")
 #페이지 제목 색 추가
