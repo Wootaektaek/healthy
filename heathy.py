@@ -323,11 +323,13 @@ if submit:
   callbacks = [es, ckp]
   model = FacePrediction(img_dir = 'project/face2bmi/train_aligned', model_type = model_type)
   model.define_model(freeze_backbone = freeze_backbone)
-
-  if mode == 'train':
-    model_history = model.train(train, valid, bs = bs, epochs = epochs, callbacks = callbacks)
-  else:
-    model.load_weights(model_dir)
+  
+  model.load_weights(model_dir)
+            
+#   if mode == 'train':
+#     model_history = model.train(train, valid, bs = bs, epochs = epochs, callbacks = callbacks)
+#   else:
+#     model.load_weights(model_dir)
 
   if person_image is not None:
     save_uploaded_file('temp_file/', person_image)    
