@@ -33,6 +33,31 @@ st.markdown("#### 안녕하세요. 헬띠입니다.\
             <br>저희는 설문을 통해 사용자에게 운동을 추천하고 사진을 업로드하면 BMI를 알려줍니다.\
             <br>이를 통해 하루하루 달라지는 본인을 확인하세요.", unsafe_allow_html=True)
 
+menu = st.sidebar.selectbox('MENU', options=['로그인', '회원가입', '회원목록'])
+
+if menu == '로그인':
+    st.subheader('로그인')
+    st.sidebar.subheader('로그인')
+
+    login_id = st.sidebar.text_input('아이디', placeholder='아이디를 입력하세요')
+    login_pw = st.sidebar.text_input('패스워드', 
+                                     placeholder='패스워드를 입력하세요', 
+                                     type='password')
+    
+    login_btn = st.sidebar.button('로그인')
+    
+    if login_btn:
+        st.sidebar.write(login_id)
+        st.sidebar.write(login_pw)
+
+if menu == '회원가입':
+    st.subheader('회원가입')
+    st.sidebar.write('회원가입')
+if menu == '회원목록':
+    st.subheader('회원목록')
+    st.sidebar.write('회원목록')
+[출처] [웹 어플리케이션 프로젝트] 로그인(1) 폼제작|작성자 cooldog112
+
 user_name = st.text_input("사용자의 이름을 입력하세요: ")
 
 sex = st.selectbox(
@@ -272,6 +297,7 @@ for r in recommend_list:
 
 st.subheader('')
 st.subheader("얼굴 이미지로 예측해보는 BMI")
+
 
 ex_image = Image.open('leedaeho.jpeg')
 
