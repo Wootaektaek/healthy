@@ -56,7 +56,6 @@ if menu == '회원가입':
 if menu == '회원목록':
     st.subheader('회원목록')
     st.sidebar.write('회원목록')
-[출처] [웹 어플리케이션 프로젝트] 로그인(1) 폼제작|작성자 cooldog112
 
 user_name = st.text_input("사용자의 이름을 입력하세요: ")
 
