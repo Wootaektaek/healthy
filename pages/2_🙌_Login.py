@@ -28,6 +28,8 @@ if authentication_status == None:
   st.warning('아이디와 패스워드를 입력해주세요.')
  
 if authentication_status:
+  authenticator.logout("Logout", "sidebar")
+  st.sidebar.title(f"Welcome {name}")
 # st.subheader("로그인해주세요.")
 
 # user_id=st.text_input('아이디를 입력해주세요.')
