@@ -1,3 +1,3 @@
 # healthy
 
-https://wootaektaek-healthy-heathy-26bmzm.streamlitapp.com/
+https://wootaektaek-healthy-heathy-qoo735.streamlit.app/
