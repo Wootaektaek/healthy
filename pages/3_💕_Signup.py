@@ -2,7 +2,7 @@ import streamlit as st
 import database_
 
 
-st.subheader("새 계정을 만듭니다.")
+st.subheader("New Account")
 name = st.text_input('이름을 입력해주세요.')
 new_user = st.text_input("아이디를 입력해주세요.")
 new_password = st.text_input("패스워드를 입력해주세요.",type='password')
