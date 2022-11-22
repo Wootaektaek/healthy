@@ -9,7 +9,6 @@ import os
 import shutil
 import time
 import database_
-import streamlit_authenticator as stauth
 
 users = database_.fetch_all_users()
 
