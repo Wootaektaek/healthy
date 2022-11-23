@@ -1,6 +1,6 @@
 import streamlit as st
 import database_
-
+import streamlit_authenticator as stauth
 
 st.subheader("New Account")
 name = st.text_input('이름을 입력해주세요.')
