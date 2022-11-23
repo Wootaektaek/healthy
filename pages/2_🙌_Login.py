@@ -43,7 +43,6 @@ if authentication_status:
   st.markdown("#### 안녕하세요. 헬띠입니다.\
             <br>저희는 설문을 통해 사용자에게 운동을 추천하고 사진을 업로드하면 BMI를 알려줍니다.\
             <br>이를 통해 하루하루 달라지는 본인을 확인하세요.", unsafe_allow_html=True)
-  user_name = st.text_input("사용자의 이름을 입력하세요: ")
 
   sex = st.selectbox(
       '성별을 골라주세요',
@@ -69,7 +68,7 @@ if authentication_status:
       '현재 식단을 골라주세요',
       ('생식위주', '체형고려', '체중조절', '비식이요법'))
 
-  st.write('You :', user_name,' / ', sex, ' / ', age, ' / ',height, ' / ', goal, ' / ', drug, ' / ', habit)
+  st.write('You :', f'{name}', ' / ', sex, ' / ', age, ' / ',height, ' / ', goal, ' / ', drug, ' / ', habit)
 
 # ==================================================================================
 # RECOMMEND
