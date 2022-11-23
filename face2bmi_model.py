@@ -236,13 +236,13 @@ class FacePrediction(object):
             for idx, box in enumerate(boxes):
                 bmi, age, sex = preds[idx]
                 box_x, box_y, box_w, box_h = box['box']
-                rect = patches.Rectangle((box_x, box_y), box_w, box_h, linewidth=1,edgecolor='r',facecolor='none')
+                rect = patches.Rectangle((box_x, box_y), box_w, box_h, linewidth=1,edgecolor='g',facecolor='none')
                 ax.add_patch(rect)
                 ax.text(box_x, box_y, 
-                        'BMI:{:3.1f}\nAGE:{:02.0f}\nSEX:{:s}'.format(bmi[0,0], age[0,0], 'M' if sex[0,0] > self.sex_thresh else 'F'),
+                        'HELLO!!😊\n'.format(bmi[0,0], age[0,0], 'M' if sex[0,0] > self.sex_thresh else 'F'),
                        color = color, fontsize = fontsize)
-                ax.set_title('BMI:{:3.1f}\nAGE:{:02.0f}\nSEX:{:s}'.format(bmi[0,0], age[0,0], 'M' if sex[0,0] > self.sex_thresh else 'F'),
-                       color = 'black', fontsize = 20)
+                ax.set_title('BMI:{:3.1f} l AGE:{:02.0f} l SEX:{:s}'.format(bmi[0,0], age[0,0], 'M' if sex[0,0] > self.sex_thresh else 'F'),
+                       color = 'black', fontsize = 17)
             plt.show()
             st.pyplot(fig)
         
