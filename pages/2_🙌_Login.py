@@ -13,11 +13,17 @@ import streamlit_authenticator as stauth
 
 users = database_.fetch_all_users()
 
-usernames=[user['key'] for user in users]
 names=[user['name'] for user in users]
+usernames=[user['key'] for user in users]
 hashed_passwords=[user['password'] for user in users]
 
-authenticator = stauth.Authenticate(names, usernames, hashed_passwords, 'healthy', 'abcdef', cookie_expiry_days=30)
+credentials = {"usernames":{}}
+
+for un, name, pw in zip(usernames, names, hashed_passwords):
+  user_dict = {"name":name,"password":pw}
+  credentials["usernames"].update({un:user_dict})
+
+authenticator = stauth.Authenticate(credentials, 'healthy', '12345', cookie_expiry_days=0)
 
 name, authentication_status, username = authenticator.login('Login', 'main')
 
@@ -302,13 +308,7 @@ if authentication_status:
     valid = pd.read_csv('project/face2bmi/valid.csv')
     train = train.loc[train['index'].isin(alimages)]
     valid = valid.loc[valid['index'].isin(alimages)]
-  # create metrics, model dirs
-    Path('project/face2bmi/metrics').mkdir(parents = True, exist_ok = True)
-    Path('project/face2bmi/saved_model').mkdir(parents = True, exist_ok = True)
-    es = EarlyStopping(patience=3)
-    ckp = ModelCheckpoint(model_dir, save_best_only=True, save_weights_only=True, verbose=1)
-    tb = TensorBoard('./tb/%s'%(model_id))
-    callbacks = [es, ckp]
+
     model = FacePrediction(img_dir = 'project/face2bmi/train_aligned', model_type = model_type)
     model.define_model(freeze_backbone = freeze_backbone)
 
@@ -321,7 +321,7 @@ if authentication_status:
 
     if person_image is not None:
       save_uploaded_file('temp_file/', person_image)    
-      g = os.listdir('temp_file/')
+      g = os.listdir('temp_file/')[0]
 
     y_pred=model.predict_faces('temp_file/'+g, show_img=True)
 
