@@ -35,17 +35,8 @@ if authentication_status == None:
  
 if authentication_status:
   authenticator.logout("Logout", "sidebar")
-  st.sidebar.title(f"Welcome {name}")
-# st.subheader("로그인해주세요.")
+  st.sidebar.title(f"{name}님 반갑습니다!")
 
-# user_id=st.text_input('아이디를 입력해주세요.')
-# user_pw=st.text_input('패스워드를 입력해주세요.',type='password')
-
-# if st.button('로그인'):
-#   if (database_.get_user(user_id).get('key')!=user_id) or (database_.get_user(user_id).get('password')!=user_pw):
-#     st.error('아이디나 패스워드가 잘못입력되었습니다.')
-#   elif (database_.get_user(user_id).get('key')==user_id) and (database_.get_user(user_id).get('password')==user_pw):
-#     st.success(database_.get_user(user_id).get('name')+'님 환영합니다.')
   #페이지 제목 색 추가
   st.markdown("<h1 style='text-align: center; color: #9ACD32;'>사용자 맞춤 운동 추천 헬띠</h1>", unsafe_allow_html=True)
 
