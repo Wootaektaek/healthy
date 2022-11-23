@@ -68,7 +68,7 @@ if authentication_status:
       '현재 식단을 골라주세요',
       ('생식위주', '체형고려', '체중조절', '비식이요법'))
 
-  st.write('You : ' sex, ' / ', age, ' / ',height, ' / ', goal, ' / ', drug, ' / ', habit)
+  st.write('You : ', sex, ' / ', age, ' / ',height, ' / ', goal, ' / ', drug, ' / ', habit)
 
 # ==================================================================================
 # RECOMMEND
@@ -243,7 +243,7 @@ if authentication_status:
 
   result=data1.iloc[best_similarity]['result']
 
-  st.markdown("##### 저희는", f'{name}',"님께" \'{}\'과(와) 관련된 운동을 추천드립니다.".format(result))
+  st.markdown("##### 저희는", f'{name}',"님께 \'{}\'과(와) 관련된 운동을 추천드립니다.".format(result))
 
   df2=data2.loc[[result]]
   df2=df2.transpose()
