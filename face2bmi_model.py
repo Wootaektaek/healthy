@@ -241,7 +241,7 @@ class FacePrediction(object):
                 ax.text(box_x, box_y, 
                         'HELLO!!!\n'.format(bmi[0,0], age[0,0], 'M' if sex[0,0] > self.sex_thresh else 'F'),
                        color = color, fontsize = fontsize)
-                ax.set_title('BMI:{:3.1f} l AGE:{:02.0f} l SEX:{:s}'.format(bmi[0,0], age[0,0], 'M' if sex[0,0] > self.sex_thresh else 'F'),
+                ax.set_title('BMI:{:3.1f} l Age:{:02.0f} l Sex:{:s}'.format(bmi[0,0], age[0,0], 'M' if sex[0,0] > self.sex_thresh else 'F'),
                        color = 'black', fontsize = 17)
             plt.show()
             st.pyplot(fig)
