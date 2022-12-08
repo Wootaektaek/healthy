@@ -313,6 +313,18 @@ if authentication_status:
       save_uploaded_file('temp_file/', person_image)    
       g = os.listdir('temp_file/')[0]
 
+    bmi_df=model.predict_df('temp_file/')
+    bmi=bmi_df['bmi'].loc[0]
+    dt_now = datetime.datetime.now()
+    database_.insert_bmi(username, str(dt_now), str(bmi))
+    df = database_.get_bmi(username)
+    df = df.astype({'BMI':'float'})
+    pd.to_datetime(df['Date'])
+
+    st.subheader('{}님의 최근 BMI입니다.'.format(name))
+    st.line_chart(df, x='Date', y='BMI')
+
+    st.subheader('오늘의 BMI입니다.')
     y_pred=model.predict_faces('temp_file/'+g, show_img=True)
 
   if os.path.exists('temp_file'):
