@@ -1,5 +1,7 @@
 import os
 from deta import Deta
+import random
+import pandas as pd
 
 DETA_KEY='c0wu0bfo_dUGE1t3eeh4sg4KA8AmGZ29B2fTT4URD'
 deta=Deta(DETA_KEY)
