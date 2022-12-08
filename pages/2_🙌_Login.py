@@ -316,7 +316,7 @@ if authentication_status:
 
     bmi_df=model.predict_df('temp_file/')
     bmi=bmi_df['bmi'].loc[0]
-    dt_now = datetime.datetime.now()
+    dt_now = datetime.datetime.now(timezone('Asia/Seoul'))
     database_.insert_bmi(username, str(dt_now), str(bmi))
     df = database_.get_bmi(username)
     df = df.astype({'BMI':'float'})
