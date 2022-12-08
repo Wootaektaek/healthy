@@ -327,7 +327,7 @@ if authentication_status:
 
     st.subheader('{}님의 최근 BMI입니다.'.format(name))
     st.line_chart(df, x='Date', y='BMI')
-    st.write(df)
+
     st.subheader('오늘의 BMI입니다.')
     y_pred=model.predict_faces('temp_file/'+g, show_img=True)
 
