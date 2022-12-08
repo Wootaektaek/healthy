@@ -28,7 +28,6 @@ def delete_user(username):
 def insert_bmi(username, date, bmi):
   num = random.random()
   return bmi_db.put({'key':username+'+'+str(num), 'Date':date, 'BMI':bmi})
-  # return bmi_db.put({'key':username, 'Date':date, 'BMI':bmi})
 
 def get_bmi(username):
   res=bmi_db.fetch()
