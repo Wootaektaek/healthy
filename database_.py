@@ -22,3 +22,14 @@ def update_user(username, updates):
 
 def delete_user(username):
   return db.delete(username)
+
+def insert_bmi(username, date, bmi):
+  num = random.random()
+  return bmi_db.put({'key':username+'+'+str(num), 'Date':date, 'BMI':bmi})
+  # return bmi_db.put({'key':username, 'Date':date, 'BMI':bmi})
+
+def get_bmi(username):
+  res=bmi_db.fetch()
+  df = pd.DataFrame(res.items, columns=['key', 'BMI', 'Date'])
+  df = df[df['key'].str.contains(username)]
+  return df
