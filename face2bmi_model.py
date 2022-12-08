@@ -234,7 +234,8 @@ class FacePrediction(object):
             ax.axis('off')
             # Create a Rectangle patch
             for idx, box in enumerate(boxes):
-                bmi, age, sex = preds[idx]
+#                 bmi, age, sex = preds[idx]
+                bmi, age, sex = self.predict(img_path)
                 box_x, box_y, box_w, box_h = box['box']
                 rect = patches.Rectangle((box_x, box_y), box_w, box_h, linewidth=1,edgecolor='g',facecolor='none')
                 ax.add_patch(rect)
